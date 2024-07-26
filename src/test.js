@@ -54,13 +54,13 @@ const invocation = Store.add.invoke({
 const conn = connection()
 
 // @ts-ignore TODO fix conn 
-// try {
-// const response = await invocation.execute(conn)
-// console.log(response.out)
-// } catch (e) {
-//   console.log("ERROR", e.stack)
-//   console.log("-----")
-// }
+try {
+	const response = await invocation.execute(conn);
+	console.log(response.out);
+} catch (e) {
+	console.log('ERROR', e.stack);
+	console.log('-----');
+}
 
 
 async function encodeString(s) {
